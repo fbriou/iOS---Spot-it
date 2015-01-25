@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-//test2
+//test
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
