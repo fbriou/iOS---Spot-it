@@ -34,12 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         Parse.setApplicationId("tDPKG1qKVf2tqAEc1Wa73KVrlvXvG2nzwMeMA6Wh", clientKey: "HqKpHq8cINDwqHObcG13A63Jqc7NuMQS80WuPCMz")
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock(nil)
-
-        
-        
         return true
     }
 

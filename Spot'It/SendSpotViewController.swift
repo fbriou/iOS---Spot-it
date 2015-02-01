@@ -23,13 +23,14 @@ class SendSpotViewController: UIViewController, UIImagePickerControllerDelegate,
         let recognizer = UITapGestureRecognizer(target: self, action: "displayImagePicker:")
         recognizer.numberOfTapsRequired = 1
         
-        //Add the recognizer to the  image view
+        //Add the recognizer to the image view
         imageView.addGestureRecognizer(recognizer)
         
     }
     
     
     func displayImagePicker(recog : UIGestureRecognizer){
+        
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
