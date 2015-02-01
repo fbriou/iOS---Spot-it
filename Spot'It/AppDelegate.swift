@@ -25,6 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as UINavigationController
         //let controller = masterNavigationController.topViewController as MasterViewController
         //controller.managedObjectContext = self.managedObjectContext
+        
+        // Initialize Parse.
+        
+        /*[Parse setApplicationId:@"tDPKG1qKVf2tqAEc1Wa73KVrlvXvG2nzwMeMA6Wh"
+        clientKey:@"HqKpHq8cINDwqHObcG13A63Jqc7NuMQS80WuPCMz"];
+        */
+        
+        Parse.setApplicationId("tDPKG1qKVf2tqAEc1Wa73KVrlvXvG2nzwMeMA6Wh", clientKey: "HqKpHq8cINDwqHObcG13A63Jqc7NuMQS80WuPCMz")
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock(nil)
+
+        
+        
         return true
     }
 
