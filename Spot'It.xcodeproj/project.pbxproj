@@ -31,6 +31,7 @@
 		A669E60A1A7EB329000EB750 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A669E6091A7EB329000EB750 /* SystemConfiguration.framework */; };
 		A669E60C1A7EB341000EB750 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A669E60B1A7EB341000EB750 /* libz.dylib */; };
 		A669E60E1A7EB352000EB750 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A669E60D1A7EB352000EB750 /* libsqlite3.dylib */; };
+		A669E6171A7EC0F7000EB750 /* SendSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669E6161A7EC0F7000EB750 /* SendSpotViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		A669E60B1A7EB341000EB750 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A669E60D1A7EB352000EB750 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A669E6101A7EB3FF000EB750 /* Spot'It-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spot'It-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A669E6161A7EC0F7000EB750 /* SendSpotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendSpotViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				A669E60F1A7EB3A1000EB750 /* Frameworks */,
 				A644EE111A75AE23007CEB16 /* AppDelegate.swift */,
 				A644EE181A75AE23007CEB16 /* DetailViewController.swift */,
+				A669E6161A7EC0F7000EB750 /* SendSpotViewController.swift */,
 				A644EE1A1A75AE23007CEB16 /* Main.storyboard */,
 				A644EE1D1A75AE23007CEB16 /* Images.xcassets */,
 				A644EE1F1A75AE23007CEB16 /* LaunchScreen.xib */,
@@ -295,6 +298,7 @@
 			files = (
 				A644EE151A75AE23007CEB16 /* Spot_It.xcdatamodeld in Sources */,
 				A644EE121A75AE23007CEB16 /* AppDelegate.swift in Sources */,
+				A669E6171A7EC0F7000EB750 /* SendSpotViewController.swift in Sources */,
 				A644EE191A75AE23007CEB16 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

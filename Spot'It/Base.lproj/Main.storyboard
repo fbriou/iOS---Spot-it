@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
-        <!--View Controller-->
+        <!--Send Spot View Controller-->
         <scene sceneID="CLG-7F-UfD">
             <objects>
-                <viewController id="cK3-k5-o4y" sceneMemberID="viewController">
+                <viewController id="cK3-k5-o4y" customClass="SendSpotViewController" customModule="Spot_It" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r9T-U7-BYc"/>
                         <viewControllerLayoutGuide type="bottom" id="2kZ-f4-Qku"/>
@@ -199,6 +199,9 @@
                                             <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dismissVC:" destination="cK3-k5-o4y" eventType="touchUpInside" id="Qht-g3-AkQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWG-Y0-pMw">
                                         <rect key="frame" x="549" y="17" width="43" height="30"/>
@@ -207,6 +210,9 @@
                                             <color key="titleColor" red="1" green="1" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendSpot:" destination="cK3-k5-o4y" eventType="touchUpInside" id="Dai-fc-PRk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42352941176470588" green="0.55294117647058827" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
@@ -270,6 +276,11 @@
                             <constraint firstItem="Jek-mf-11b" firstAttribute="width" secondItem="Hkb-pL-fEj" secondAttribute="width" id="vgD-X8-2j4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Igu-oz-Zh9" id="R03-Q4-DvG"/>
+                        <outlet property="imageView" destination="zNZ-Wf-6Eg" id="P0o-gT-HCu"/>
+                        <outlet property="nameLabel" destination="hEV-NU-YHp" id="7Tv-Nn-KDl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlF-6U-Gh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
