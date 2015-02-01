@@ -12,7 +12,7 @@ class SendSpotViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBOutlet weak var nameLabel: UITextField!
     @IBOutlet weak var descriptionLabel: UITextView!
-    
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -45,7 +45,28 @@ class SendSpotViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @IBAction func sendSpot(sender: AnyObject) {
         
+        let spot = PFObject(className: "Spot")
+        spot["name"] = nameLabel.text
+        spot["description"] = descriptionLabel.text
         
+        let imageData = UIImageJPEGRepresentation(imageView.image, 0.5)
+        let spotImage = PFFile(data: imageData)
+        
+        spotImage.saveInBackgroundWithBlock({ (success:Bool, error:NSError!) -> Void in
+            
+            if success {
+                spot["image"] = spotImage
+                spot.saveInBackgroundWithBlock(nil)
+                
+                self.dismissViewControllerAnimated(true, completion: nil)
+                
+            }
+            
+            }, progressBlock: { (progress:Int32) -> Void in
+            
+                var progressF:Float = (Float(progress) / 100)
+                self.progressBar.setProgress(progressF, animated: true)
+        })
         
     }
     

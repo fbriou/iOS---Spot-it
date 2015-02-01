@@ -280,6 +280,7 @@
                         <outlet property="descriptionLabel" destination="Igu-oz-Zh9" id="R03-Q4-DvG"/>
                         <outlet property="imageView" destination="zNZ-Wf-6Eg" id="P0o-gT-HCu"/>
                         <outlet property="nameLabel" destination="hEV-NU-YHp" id="7Tv-Nn-KDl"/>
+                        <outlet property="progressBar" destination="UaS-mQ-8AY" id="iEI-2t-EcT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlF-6U-Gh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
