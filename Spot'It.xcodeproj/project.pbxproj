@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A644EE121A75AE23007CEB16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644EE111A75AE23007CEB16 /* AppDelegate.swift */; };
 		A644EE151A75AE23007CEB16 /* Spot_It.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A644EE131A75AE23007CEB16 /* Spot_It.xcdatamodeld */; };
-		A644EE171A75AE23007CEB16 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644EE161A75AE23007CEB16 /* MasterViewController.swift */; };
 		A644EE191A75AE23007CEB16 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A644EE181A75AE23007CEB16 /* DetailViewController.swift */; };
 		A644EE1C1A75AE23007CEB16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A644EE1A1A75AE23007CEB16 /* Main.storyboard */; };
 		A644EE1E1A75AE23007CEB16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A644EE1D1A75AE23007CEB16 /* Images.xcassets */; };
@@ -32,7 +31,6 @@
 		A644EE101A75AE23007CEB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A644EE111A75AE23007CEB16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A644EE141A75AE23007CEB16 /* Spot_It.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spot_It.xcdatamodel; sourceTree = "<group>"; };
-		A644EE161A75AE23007CEB16 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		A644EE181A75AE23007CEB16 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A644EE1B1A75AE23007CEB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A644EE1D1A75AE23007CEB16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				A644EE111A75AE23007CEB16 /* AppDelegate.swift */,
-				A644EE161A75AE23007CEB16 /* MasterViewController.swift */,
 				A644EE181A75AE23007CEB16 /* DetailViewController.swift */,
 				A644EE1A1A75AE23007CEB16 /* Main.storyboard */,
 				A644EE1D1A75AE23007CEB16 /* Images.xcassets */,
@@ -220,7 +217,6 @@
 			files = (
 				A644EE151A75AE23007CEB16 /* Spot_It.xcdatamodeld in Sources */,
 				A644EE121A75AE23007CEB16 /* AppDelegate.swift in Sources */,
-				A644EE171A75AE23007CEB16 /* MasterViewController.swift in Sources */,
 				A644EE191A75AE23007CEB16 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +411,7 @@
 				A644EE321A75AE23007CEB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A644EE331A75AE23007CEB16 /* Build configuration list for PBXNativeTarget "Spot'ItTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +420,7 @@
 				A644EE351A75AE23007CEB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
