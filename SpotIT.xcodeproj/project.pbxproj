@@ -112,7 +112,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A69CE0D71A804558009734AF = {
+		A64AEE671A82CA320066033D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A69CE13A1A8046E1009734AF /* MapKit.framework */,
@@ -132,6 +132,14 @@
 				A69CE11C1A804604009734AF /* ParseCrashReporting.framework */,
 				A69CE11D1A804604009734AF /* ParseFacebookUtils.framework */,
 				A69CE11E1A804604009734AF /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A69CE0D71A804558009734AF = {
+			isa = PBXGroup;
+			children = (
+				A64AEE671A82CA320066033D /* Frameworks */,
 				A69CE0E21A804558009734AF /* SpotIT */,
 				A69CE0FD1A804558009734AF /* SpotITTests */,
 				A69CE0E11A804558009734AF /* Products */,
@@ -479,6 +487,7 @@
 				A69CE1061A804558009734AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A69CE1071A804558009734AF /* Build configuration list for PBXNativeTarget "SpotITTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +496,7 @@
 				A69CE1091A804558009734AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
