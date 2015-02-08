@@ -44,4 +44,40 @@ class MySpotTableViewController: PFQueryTableViewController {
         return 100
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let cell = tableView.cellForRowAtIndexPath(indexPath){
+            if cell.textLabel?.text != "Load more..."{
+                self.performSegueWithIdentifier("showDetail", sender: self)
+            }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail"{
+            var indexPath:NSIndexPath? = nil
+            if self.tableView.indexPathForSelectedRow() == nil{
+                //It's for the ipad or iphone 6 plus which need to be init
+                indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            }else{
+                indexPath = self.tableView.indexPathForSelectedRow()
+            }
+            
+            let message = self.objects[indexPath!.row] as PFObject
+            
+            let detailViewController = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+            detailViewController.detailItem = message
+            
+            detailViewController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            detailViewController.navigationItem.leftItemsSupplementBackButton = true
+        }
+    }
+    
+    //In order to select a Spot by default on ipad and Iphone 6 (landscape)
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        if size.width >= 736 {
+            self.performSegueWithIdentifier("showDetail", sender: self)
+        }
+        
+    }
+    
 }
