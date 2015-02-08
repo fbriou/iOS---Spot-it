@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A689D30E1A87E6E800600B88 /* MySpotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A689D30D1A87E6E800600B88 /* MySpotTableViewController.swift */; };
 		A69CE1011A804558009734AF /* SpotITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69CE1001A804558009734AF /* SpotITTests.swift */; };
 		A69CE1131A8045B9009734AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69CE10B1A8045B9009734AF /* AppDelegate.swift */; };
 		A69CE1141A8045B9009734AF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69CE10C1A8045B9009734AF /* DetailViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A689D30D1A87E6E800600B88 /* MySpotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpotTableViewController.swift; sourceTree = "<group>"; };
 		A69CE0E01A804558009734AF /* SpotIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69CE0E41A804558009734AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A69CE0FA1A804558009734AF /* SpotITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,7 @@
 				A69CE10B1A8045B9009734AF /* AppDelegate.swift */,
 				A69CE10C1A8045B9009734AF /* DetailViewController.swift */,
 				A69CE10D1A8045B9009734AF /* SendSpotViewController.swift */,
+				A689D30D1A87E6E800600B88 /* MySpotTableViewController.swift */,
 				A69CE10E1A8045B9009734AF /* Main.storyboard */,
 				A69CE10F1A8045B9009734AF /* Images.xcassets */,
 				A69CE1101A8045B9009734AF /* LaunchScreen.xib */,
@@ -299,6 +302,7 @@
 				A69CE1131A8045B9009734AF /* AppDelegate.swift in Sources */,
 				A69CE1191A8045B9009734AF /* Spot_It.xcdatamodel in Sources */,
 				A69CE1141A8045B9009734AF /* DetailViewController.swift in Sources */,
+				A689D30E1A87E6E800600B88 /* MySpotTableViewController.swift in Sources */,
 				A69CE1151A8045B9009734AF /* SendSpotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
