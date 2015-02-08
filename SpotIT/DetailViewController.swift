@@ -10,10 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    @IBOutlet weak var spotImageView: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
 
-    var detailItem: AnyObject? {
+    var detailItem: PFObject? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,10 +23,24 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.valueForKey("timeStamp")!.description
+        if let detail: PFObject = self.detailItem {
+            
+            if let textView = descriptionTextView {
+                textView.text = detail["description"] as? String
             }
+            
+            let imageFile = detail["image"] as? PFFile
+            imageFile?.getDataInBackgroundWithBlock({ (data:NSData!, error: NSError!) -> Void in
+                if error == nil{
+                    let image = UIImage(data: data)
+                    self.spotImageView.image = image
+                }
+                
+                }, progressBlock: { (progress:Int32) -> Void in
+                println(progress)
+                    
+            })
+            
         }
     }
 
