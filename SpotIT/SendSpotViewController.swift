@@ -22,29 +22,16 @@ class SendSpotViewController: UIViewController, UIImagePickerControllerDelegate,
         //Create a recognizer for the imagePicker
         let recognizer = UITapGestureRecognizer(target: self, action: "displayImagePicker:")
         recognizer.numberOfTapsRequired = 1
-        
+        //Add the recognizer to the imageView
         imageView.addGestureRecognizer(recognizer)
     }
     
     
     func displayImagePicker (recog:UITapGestureRecognizer){
-        println("taptap")
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
+        //Get the photo library
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func AddImage(sender: AnyObject) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        
         self.presentViewController(imagePicker, animated: true, completion: nil)
         
     }
@@ -94,7 +81,7 @@ class SendSpotViewController: UIViewController, UIImagePickerControllerDelegate,
     // MARK: Image Picker Controller Delegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        //imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         picker.dismissViewControllerAnimated(true, completion: nil)
         
