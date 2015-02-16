@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import CoreData
 
 class MySpotTableViewController: PFQueryTableViewController {
+    
+    
+    func loginCheck(){
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObjectContext
+        
+        newUser.setValue("Florian", forKey: "username")
+        newUser.setValue("pass", forKey: "password")
+        
+        context.save(nil)
+        
+        var request = NSFetchRequest(entityName: "Users")
+        
+        
+    }
+    
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

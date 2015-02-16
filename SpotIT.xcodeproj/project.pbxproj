@@ -33,6 +33,7 @@
 		A69CE1371A80467B009734AF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE1361A80467B009734AF /* libz.dylib */; };
 		A69CE1391A804681009734AF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE1381A804681009734AF /* libsqlite3.dylib */; };
 		A69CE13B1A8046E1009734AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE13A1A8046E1009734AF /* MapKit.framework */; };
+		A6D8E9331A9161CA001ECF4F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8E9321A9161CA001ECF4F /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		A69CE1361A80467B009734AF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A69CE1381A804681009734AF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A69CE13A1A8046E1009734AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A6D8E9321A9161CA001ECF4F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				A69CE10D1A8045B9009734AF /* SendSpotViewController.swift */,
 				A689D30D1A87E6E800600B88 /* MySpotTableViewController.swift */,
 				A69CE10E1A8045B9009734AF /* Main.storyboard */,
+				A6D8E9321A9161CA001ECF4F /* LoginViewController.swift */,
 				A69CE10F1A8045B9009734AF /* Images.xcassets */,
 				A69CE1101A8045B9009734AF /* LaunchScreen.xib */,
 				A69CE1111A8045B9009734AF /* Spot_It.xcdatamodel */,
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D8E9331A9161CA001ECF4F /* LoginViewController.swift in Sources */,
 				A69CE1131A8045B9009734AF /* AppDelegate.swift in Sources */,
 				A69CE1191A8045B9009734AF /* Spot_It.xcdatamodel in Sources */,
 				A69CE1141A8045B9009734AF /* DetailViewController.swift in Sources */,
