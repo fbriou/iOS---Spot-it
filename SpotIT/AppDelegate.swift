@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         // Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as UINavigationController
@@ -23,15 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         splitViewController.delegate = self
 
         let masterNavigationController = splitViewController.viewControllers[0] as UINavigationController
-        //let controller = masterNavigationController.topViewController as MasterViewController
+        //let controller = masterNavigationController.topViewController as MySpotTableViewController
         //controller.managedObjectContext = self.managedObjectContext
         
-        // Initialize Parse.
-        
-        /*[Parse setApplicationId:@"tDPKG1qKVf2tqAEc1Wa73KVrlvXvG2nzwMeMA6Wh"
-        clientKey:@"HqKpHq8cINDwqHObcG13A63Jqc7NuMQS80WuPCMz"];
-        */
-        
+        // Initialize Parse
         Parse.setApplicationId("tDPKG1qKVf2tqAEc1Wa73KVrlvXvG2nzwMeMA6Wh", clientKey: "HqKpHq8cINDwqHObcG13A63Jqc7NuMQS80WuPCMz")
         
         return true
@@ -84,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("Spot_It", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("SpotIT", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
 
@@ -92,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         // The persistent store coordinator for the application. This implementation creates and return a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
         // Create the coordinator and store
         var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("Spot_It.sqlite")
+        let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SpotIT.sqlite")
         var error: NSError? = nil
         var failureReason = "There was an error creating or loading the application's saved data."
         if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {

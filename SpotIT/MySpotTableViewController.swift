@@ -12,30 +12,7 @@ import CoreData
 class MySpotTableViewController: PFQueryTableViewController {
     
     
-    func loginCheck(){
-        
-        println("test")
-        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        
-        if let context:NSManagedObjectContext = appDel.managedObjectContext! as NSManagedObjectContext? {
-        
-        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObjectContext
-        
-        newUser.setValue("Florian", forKey: "username")
-        newUser.setValue("pass", forKey: "password")
-        
-        context.save(nil)
-        
-        var request = NSFetchRequest(entityName: "Users")
-        request.returnsObjectsAsFaults = false
-        
-        var results = context.executeFetchRequest(request, error: nil)
-        println(results)
-            
-        }
-        
-        
-    }
+     var managedObjectContext: NSManagedObjectContext? = nil
     
     
     required init(coder aDecoder: NSCoder) {
@@ -49,10 +26,33 @@ class MySpotTableViewController: PFQueryTableViewController {
         self.paginationEnabled = true
         self.objectsPerPage = 7
         
-        //self.loginCheck()
+        self.loginCheck()
         
     }
 
+    
+    func loginCheck(){
+        
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let context:NSManagedObjectContext = appDel.managedObjectContext! as NSManagedObjectContext
+            
+            var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
+            
+            newUser.setValue("Florian", forKey: "username")
+            newUser.setValue("pass", forKey: "password")
+            
+            context.save(nil)
+            
+            var request = NSFetchRequest(entityName: "Users")
+            request.returnsObjectsAsFaults = false
+            
+            var results = context.executeFetchRequest(request, error: nil)
+            println(results)
+        
+    }
+    
+    
     override func queryForTable() -> PFQuery! {
         // Create the query
         let query = PFQuery(className: self.parseClassName)

@@ -37,7 +37,7 @@ class DetailViewController: UIViewController {
                 }
                 
                 }, progressBlock: { (progress:Int32) -> Void in
-                println(progress)
+                //println(progress)
                     
             })
             

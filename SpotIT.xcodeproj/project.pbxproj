@@ -12,10 +12,8 @@
 		A69CE1131A8045B9009734AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69CE10B1A8045B9009734AF /* AppDelegate.swift */; };
 		A69CE1141A8045B9009734AF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69CE10C1A8045B9009734AF /* DetailViewController.swift */; };
 		A69CE1151A8045B9009734AF /* SendSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69CE10D1A8045B9009734AF /* SendSpotViewController.swift */; };
-		A69CE1161A8045B9009734AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69CE10E1A8045B9009734AF /* Main.storyboard */; };
 		A69CE1171A8045B9009734AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A69CE10F1A8045B9009734AF /* Images.xcassets */; };
 		A69CE1181A8045B9009734AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69CE1101A8045B9009734AF /* LaunchScreen.xib */; };
-		A69CE1191A8045B9009734AF /* Spot_It.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = A69CE1111A8045B9009734AF /* Spot_It.xcdatamodel */; };
 		A69CE11F1A804604009734AF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE11A1A804604009734AF /* Bolts.framework */; };
 		A69CE1201A804604009734AF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE11B1A804604009734AF /* Parse.framework */; };
 		A69CE1211A804604009734AF /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE11C1A804604009734AF /* ParseCrashReporting.framework */; };
@@ -34,6 +32,8 @@
 		A69CE1391A804681009734AF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE1381A804681009734AF /* libsqlite3.dylib */; };
 		A69CE13B1A8046E1009734AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69CE13A1A8046E1009734AF /* MapKit.framework */; };
 		A6D8E9331A9161CA001ECF4F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D8E9321A9161CA001ECF4F /* LoginViewController.swift */; };
+		A6F217B91A93E0C70035F4E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69CE10E1A8045B9009734AF /* Main.storyboard */; };
+		A6F217EF1A93E6160035F4E9 /* SpotIT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A6F217ED1A93E6160035F4E9 /* SpotIT.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,6 @@
 		A69CE10E1A8045B9009734AF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A69CE10F1A8045B9009734AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A69CE1101A8045B9009734AF /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		A69CE1111A8045B9009734AF /* Spot_It.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spot_It.xcdatamodel; sourceTree = "<group>"; };
 		A69CE11A1A804604009734AF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A69CE11B1A804604009734AF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A69CE11C1A804604009734AF /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		A69CE1381A804681009734AF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A69CE13A1A8046E1009734AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A6D8E9321A9161CA001ECF4F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A6F217EE1A93E6160035F4E9 /* SpotIT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpotIT.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +170,7 @@
 				A6D8E9321A9161CA001ECF4F /* LoginViewController.swift */,
 				A69CE10F1A8045B9009734AF /* Images.xcassets */,
 				A69CE1101A8045B9009734AF /* LaunchScreen.xib */,
-				A69CE1111A8045B9009734AF /* Spot_It.xcdatamodel */,
+				A6F217ED1A93E6160035F4E9 /* SpotIT.xcdatamodeld */,
 				A69CE0E31A804558009734AF /* Supporting Files */,
 				A69CE10A1A8045B9009734AF /* SpotIT-Bridging-Header.h */,
 			);
@@ -282,7 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69CE1161A8045B9009734AF /* Main.storyboard in Resources */,
+				A6F217B91A93E0C70035F4E9 /* Main.storyboard in Resources */,
 				A69CE1181A8045B9009734AF /* LaunchScreen.xib in Resources */,
 				A69CE1171A8045B9009734AF /* Images.xcassets in Resources */,
 			);
@@ -304,7 +304,7 @@
 			files = (
 				A6D8E9331A9161CA001ECF4F /* LoginViewController.swift in Sources */,
 				A69CE1131A8045B9009734AF /* AppDelegate.swift in Sources */,
-				A69CE1191A8045B9009734AF /* Spot_It.xcdatamodel in Sources */,
+				A6F217EF1A93E6160035F4E9 /* SpotIT.xcdatamodeld in Sources */,
 				A69CE1141A8045B9009734AF /* DetailViewController.swift in Sources */,
 				A689D30E1A87E6E800600B88 /* MySpotTableViewController.swift in Sources */,
 				A69CE1151A8045B9009734AF /* SendSpotViewController.swift in Sources */,
@@ -507,6 +507,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A6F217ED1A93E6160035F4E9 /* SpotIT.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A6F217EE1A93E6160035F4E9 /* SpotIT.xcdatamodel */,
+			);
+			currentVersion = A6F217EE1A93E6160035F4E9 /* SpotIT.xcdatamodel */;
+			path = SpotIT.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A69CE0D81A804558009734AF /* Project object */;
 }
