@@ -13,8 +13,11 @@ class MySpotTableViewController: PFQueryTableViewController {
     
     
     func loginCheck(){
+        
+        println("test")
         var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        if let context:NSManagedObjectContext = appDel.managedObjectContext! as NSManagedObjectContext? {
         
         var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObjectContext
         
@@ -24,6 +27,12 @@ class MySpotTableViewController: PFQueryTableViewController {
         context.save(nil)
         
         var request = NSFetchRequest(entityName: "Users")
+        request.returnsObjectsAsFaults = false
+        
+        var results = context.executeFetchRequest(request, error: nil)
+        println(results)
+            
+        }
         
         
     }
@@ -39,6 +48,8 @@ class MySpotTableViewController: PFQueryTableViewController {
         self.title = "Mes Spots"
         self.paginationEnabled = true
         self.objectsPerPage = 7
+        
+        //self.loginCheck()
         
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIkit
+import CoreData
 
 class SendSpotViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -17,7 +18,28 @@ class SendSpotViewController: UIViewController, UIImagePickerControllerDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Core data test
+        println("test")
+        var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        var context:NSManagedObjectContext = appDel.managedObjectContext!
+        
+        var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObjectContext
+        
+        newUser.setValue("Florian", forKey: "username")
+        newUser.setValue("pass", forKey: "password")
+        
+        context.save(nil)
+        
+        var request = NSFetchRequest(entityName: "Users")
+        request.returnsObjectsAsFaults = false
+        
+        var results = context.executeFetchRequest(request, error: nil)
+        println(results)
+
+        
+        
         
         //Create a recognizer for the imagePicker
         let recognizer = UITapGestureRecognizer(target: self, action: "displayImagePicker:")
