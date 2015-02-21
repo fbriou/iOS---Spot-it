@@ -12,7 +12,7 @@ import CoreData
 class MySpotTableViewController: PFQueryTableViewController {
     
     
-     var managedObjectContext: NSManagedObjectContext? = nil
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     
     required init(coder aDecoder: NSCoder) {
@@ -26,29 +26,59 @@ class MySpotTableViewController: PFQueryTableViewController {
         self.paginationEnabled = true
         self.objectsPerPage = 7
         
-        self.loginCheck()
+        //self.loginCheck()
         
     }
-
+    
     
     func loginCheck(){
+        
+        let loginViewController:LoginViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController
+        self.showViewController(loginViewController, sender: self)
+        
+        /*
         
         var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
         let context:NSManagedObjectContext = appDel.managedObjectContext! as NSManagedObjectContext
+        
+        //var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
+        
+        //newUser.setValue("Mareva", forKey: "username")
+        //newUser.setValue("pass2", forKey: "password")
+        
+        //context.save(nil)
+        
+        var request = NSFetchRequest(entityName: "Users")
+        request.returnsObjectsAsFaults = false
+        
+        
+        var results = context.executeFetchRequest(request, error: nil)
+        
+        if results?.count > 0 {
             
+            for result: AnyObject in results! {
+                if let loginCheck = result.valueForKey("loginCheck") as? String {
+                    println(loginCheck)
+                    if loginCheck == "NOK"{
+                        
+                    }
+                }
+                
+            }
+            
+        }else{
+            //First launch
+            println("First launch")
             var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
             
-            newUser.setValue("Florian", forKey: "username")
-            newUser.setValue("pass", forKey: "password")
+            newUser.setValue("NOK", forKey: "loginCheck")
             
             context.save(nil)
-            
-            var request = NSFetchRequest(entityName: "Users")
-            request.returnsObjectsAsFaults = false
-            
-            var results = context.executeFetchRequest(request, error: nil)
-            println(results)
+        }
+        
+       */
+        
         
     }
     
