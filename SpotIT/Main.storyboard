@@ -150,6 +150,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginButton:" destination="yOn-cm-hb2" eventType="touchUpInside" id="JZW-ZA-fGS"/>
                                     <segue destination="7bK-jq-Zjz" kind="presentation" id="InQ-U1-pcR"/>
                                 </connections>
                             </button>

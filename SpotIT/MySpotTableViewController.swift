@@ -53,7 +53,6 @@ class MySpotTableViewController: PFQueryTableViewController {
         
         
         var results = context.executeFetchRequest(request, error: nil)
-        println(results)
         
         if results?.count > 0 {
             
