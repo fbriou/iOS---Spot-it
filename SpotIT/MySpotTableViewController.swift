@@ -30,13 +30,12 @@ class MySpotTableViewController: PFQueryTableViewController {
         
     }
     
-    
+    override func viewDidAppear(animated: Bool) {
+        self.loginCheck()
+    }
     func loginCheck(){
         
-        let loginViewController:LoginViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController
-        self.showViewController(loginViewController, sender: self)
         
-        /*
         
         var appDel:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
@@ -54,6 +53,7 @@ class MySpotTableViewController: PFQueryTableViewController {
         
         
         var results = context.executeFetchRequest(request, error: nil)
+        println(results)
         
         if results?.count > 0 {
             
@@ -61,7 +61,7 @@ class MySpotTableViewController: PFQueryTableViewController {
                 if let loginCheck = result.valueForKey("loginCheck") as? String {
                     println(loginCheck)
                     if loginCheck == "NOK"{
-                        
+                        performSegueWithIdentifier("jumpToLogin", sender: self)
                     }
                 }
                 
@@ -77,7 +77,7 @@ class MySpotTableViewController: PFQueryTableViewController {
             context.save(nil)
         }
         
-       */
+    
         
         
     }

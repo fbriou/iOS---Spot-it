@@ -149,6 +149,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7bK-jq-Zjz" kind="presentation" id="InQ-U1-pcR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6K-L0-ZDG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604.5" y="-1086.5"/>
+            <point key="canvasLocation" x="1204.5" y="-1350.5"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -240,6 +243,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="yOn-cm-hb2" kind="presentation" identifier="jumpToLogin" id="pZ7-N1-IDv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -436,6 +442,7 @@
         <image name="icn_camera" width="240" height="320"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="InQ-U1-pcR"/>
         <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
