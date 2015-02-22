@@ -43,7 +43,6 @@ class LoginViewController: UIViewController {
                         //Set loginCheck to OK
                         result.setValue("OK", forKey: "loginCheck")
                         context.save(nil)
-                        println(result)
                     }
                 }
             }

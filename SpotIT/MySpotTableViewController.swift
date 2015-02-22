@@ -41,13 +41,6 @@ class MySpotTableViewController: PFQueryTableViewController {
         
         let context:NSManagedObjectContext = appDel.managedObjectContext! as NSManagedObjectContext
         
-        //var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
-        
-        //newUser.setValue("Mareva", forKey: "username")
-        //newUser.setValue("pass2", forKey: "password")
-        
-        //context.save(nil)
-        
         var request = NSFetchRequest(entityName: "Users")
         request.returnsObjectsAsFaults = false
         
@@ -69,11 +62,16 @@ class MySpotTableViewController: PFQueryTableViewController {
         }else{
             //First launch
             println("First launch")
+            
+            //Create a new object for loginCheck entity
             var newUser = NSEntityDescription.insertNewObjectForEntityForName("Users", inManagedObjectContext: context) as NSManagedObject
-            
+            //Set loginCheck to "NOK"
             newUser.setValue("NOK", forKey: "loginCheck")
-            
             context.save(nil)
+            
+            //Go to login screen
+            performSegueWithIdentifier("jumpToLogin", sender: self)
+            
         }
         
     
